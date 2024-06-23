@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'homework1',
+    'homework2',
 ]
 
 MIDDLEWARE = [
@@ -152,6 +153,11 @@ LOGGING = {
             'level': 'INFO',
         },
         'homework1': {
+            'handlers': ['console', 'file'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+        'homework2': {
             'handlers': ['console', 'file'],
             'level': 'DEBUG',
             'propagate': True,

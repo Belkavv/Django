@@ -32,7 +32,7 @@ def client_orders(request, id_client: int):
                                                          order__order_date__gte=last_365_days).distinct()
 
     logger.debug('About page accessed')
-    return render(request, 'hw3/client_orders.html', {
+    return render(request, 'hw3/client_order.html', {
         'client_orders_last_7_days': client_orders_last_7_days,
         'client_orders_last_30_days': client_orders_last_30_days,
         'client_orders_last_365_days': client_orders_last_365_days,

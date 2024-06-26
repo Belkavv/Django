@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'homework2',
     'homework3',
     'homework4',
+    'homework5',
 ]
 
 MIDDLEWARE = [
@@ -107,7 +108,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru-ru'
 
 TIME_ZONE = 'UTC'
 
@@ -174,6 +175,11 @@ LOGGING = {
             'propagate': True,
         },
         'homework4': {
+            'handlers': ['console', 'file'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+        'homework5': {
             'handlers': ['console', 'file'],
             'level': 'DEBUG',
             'propagate': True,

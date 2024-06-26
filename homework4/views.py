@@ -23,10 +23,9 @@ def add_product(request):
                 description=form_data['description'],
                 price=form_data['price'],
                 quantity=form_data['quantity'],
+                image=request.FILES['image']
             )
-            image = form_data['image']
-            fs = FileSystemStorage()
-            fs.save(image.name, image)
+
     else:
         form = ProductForm()
     context = {'title': 'Добавить продукт', 'form': form}
